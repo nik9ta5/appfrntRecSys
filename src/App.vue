@@ -1,43 +1,34 @@
 <template>
   <div class="paper">
 
-    <div class="container">
+    <div class="sendData">
+      <textarea class="inputData" v-model="visits" placeholder="Посещение"></textarea>
+      <textarea class="inputData" v-model="complaint" placeholder="Жалобы"></textarea>
+      <textarea class="inputData" v-model="anamnesis" placeholder="Анамнез заболевания"></textarea>
+      <textarea class="inputData" v-model="objective_status" placeholder="Объективный статус"></textarea>
+      <textarea class="inputData" v-model="diagnosis_details" placeholder="Диагноз основной"></textarea>
+      <textarea class="inputData" v-model="recommendations" placeholder="Рекомендации, назначения"></textarea>
+      
+      <button class="btnSend" @click="postFunc">Отправить</button>
+    </div>
 
-      <div class="formSendData">
-        <textarea class="inputData" v-model="visits" placeholder="Посещение"></textarea>
-        <textarea class="inputData" v-model="complaint" placeholder="Жалобы"></textarea>
-        <textarea class="inputData" v-model="anamnesis" placeholder="Анамнез заболевания"></textarea>
-        <textarea class="inputData" v-model="objective_status" placeholder="Объективный статус"></textarea>
-        <textarea class="inputData" v-model="diagnosis_details" placeholder="Диагноз основной"></textarea>
-        <textarea class="inputData" v-model="recommendations" placeholder="Рекомендации, назначения"></textarea>
+    <div class="recommend">
+
+      <div v-if="vectorSearchData && vectorSearchData.length">
         
-        <button class="btnSend" @click="postFunc">Отправить</button>
-      </div>
-
-      <div class="right_recomends">
-
-        <div v-if="vectorSearchData && vectorSearchData.length">
-          
-          <div v-for="(item, index) in vectorSearchData">
-            <div class="recomend_card">
-              <div class="recomend_card_item"><p>Посещение</p></div>
-              <div class="recomend_card_item"><p>Жалоба</p></div>
-              <div class="recomend_card_item"><p>Анамнез заболевания</p></div>
-              <div class="recomend_card_item"><p>Объективный статус: {{ item.objective_status }}</p></div>
-              <div class="recomend_card_item"><p>Диагноз основной: {{ item.diagnosis_details }}</p></div>
-              <div class="recomend_card_item"><p>Рекомендации, назначения</p></div>
-            </div>
+        <div v-for="(item, index) in vectorSearchData">
+          <div class="recomend_card">
+            <div class="recomend_card_item"><p>Посещение</p></div>
+            <div class="recomend_card_item"><p>Жалоба</p></div>
+            <div class="recomend_card_item"><p>Анамнез заболевания</p></div>
+            <div class="recomend_card_item"><p>Объективный статус: {{ item.objective_status }}</p></div>
+            <div class="recomend_card_item"><p>Диагноз основной: {{ item.diagnosis_details }}</p></div>
+            <div class="recomend_card_item"><p>Рекомендации, назначения</p></div>
           </div>
-
-
         </div>
 
-        <div v-else>
-          
-        </div>
 
       </div>
-
     </div>
 
 </div>

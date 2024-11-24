@@ -15,12 +15,25 @@
     0 20px 0 -10px #eee, /* Тень третьего слоя */
     0 20px 1px -9px rgba(0,0,0,0.15); /* Тень третьего слоя */
 }
-
-.container{
-  
+.sendData {
+  display: flex; /* Используем Flexbox */
+  flex-direction: column; /* Располагаем элементы в столбик */
+  justify-content: center; /* Центрируем по высоте */
+  align-items: center; /* Центрируем по ширине */
 }
-.inputData {
-  text-align: center;
-  align-items: center;
 
+.inputData {
+  width: 75%;
+  height: 100px; 
+  margin-bottom: 15px; /* Отступ между текстовыми областями */
+}
+
+.btnSend {
+  width: 75%;
+  height: 50px;
+  background-color: bisque;
+  mix-blend-mode: difference;
+  font-size: 2em;
+  font-weight: bold;
+  font-family: Arial, Helvetica; 
 }
