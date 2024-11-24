@@ -25,17 +25,28 @@
 .inputData {
   width: 75%;
   height: 8%; 
-  margin-top: 1%;
+  margin-top: 2%;
+  font-size: x-large;
   resize: none;
 }
-
 .btnSend {
   width: 75%;
   height: 8%;
-  margin-bottom: 1%;
+  margin-bottom: 2%;
   background-color: bisque;
   mix-blend-mode: difference;
   font-size: 1.5em;
   font-weight: bold;
   font-family: Arial, Helvetica; 
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+.btnSend:hover {
+  background-color: #ffcc80;
+}
+
+.btnSend:active {
+  transform: scale(0.95);
 }
