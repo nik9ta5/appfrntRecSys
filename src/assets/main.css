@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container{
+  width: 1200px;
+  min-height: 100vh;
+
+  align-items: center;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+}
+
+.left_formData{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.right_recomends{
+  height: 80vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  padding: 20px;
+  overflow-y: auto; /* Включаем вертикальный скролл */
+}
+
+
+.recomend_card{
+  margin: 20px;
+
+  width: 80%;
+  min-height: 20vh;
+
+  background: rgb(215, 193, 236);
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  padding: 10px;
+}
+
+.recomend_card_item{
+  margin: 5px;
+  min-height: 3vh;
+
+  font-size: 16px;
+}
+
+
+.formSendData{
+  width: 80%;
+  min-height: 40vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputData{
+  width: 80%;
+  min-height: 40px;
+
+  border-radius: 5px;
+
+  margin: 20px;
+  padding: 5px;
+}
+
+.btnSend{
+  width: 140px;
+  height: 60px;
+
+  border-radius: 10px;
+}
