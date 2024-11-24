@@ -1,8 +1,7 @@
 <template>
-  
-  <div class="container">
+  <div class="paper">
 
-    <div class="left_formData">
+    <div class="container">
 
       <div class="formSendData">
         <textarea class="inputData" v-model="visits" placeholder="Посещение"></textarea>
@@ -15,33 +14,33 @@
         <button class="btnSend" @click="postFunc">Отправить</button>
       </div>
 
-    </div>
-    <div class="right_recomends">
+      <div class="right_recomends">
 
-      <div v-if="vectorSearchData && vectorSearchData.length">
-        
-        <div v-for="(item, index) in vectorSearchData">
-          <div class="recomend_card">
-            <div class="recomend_card_item"><p>Посещение</p></div>
-            <div class="recomend_card_item"><p>Жалоба</p></div>
-            <div class="recomend_card_item"><p>Анамнез заболевания</p></div>
-            <div class="recomend_card_item"><p>Объективный статус: {{ item.objective_status }}</p></div>
-            <div class="recomend_card_item"><p>Диагноз основной: {{ item.diagnosis_details }}</p></div>
-            <div class="recomend_card_item"><p>Рекомендации, назначения</p></div>
+        <div v-if="vectorSearchData && vectorSearchData.length">
+          
+          <div v-for="(item, index) in vectorSearchData">
+            <div class="recomend_card">
+              <div class="recomend_card_item"><p>Посещение</p></div>
+              <div class="recomend_card_item"><p>Жалоба</p></div>
+              <div class="recomend_card_item"><p>Анамнез заболевания</p></div>
+              <div class="recomend_card_item"><p>Объективный статус: {{ item.objective_status }}</p></div>
+              <div class="recomend_card_item"><p>Диагноз основной: {{ item.diagnosis_details }}</p></div>
+              <div class="recomend_card_item"><p>Рекомендации, назначения</p></div>
+            </div>
           </div>
+
+
         </div>
 
+        <div v-else>
+          
+        </div>
 
-      </div>
-
-      <div v-else>
-        
       </div>
 
     </div>
 
-  </div>
-
+</div>
 </template>
 
 <script>
