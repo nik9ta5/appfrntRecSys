@@ -3,10 +3,10 @@
   margin-left: auto;
   margin-right: auto;
   position: absolute;
-  top: 50%;
+  transform: translate(-50%, 0);
+  top: 0;
   left: 50%;
-  transform: translate(-50%, -50%); 
-  height: 95%;
+  height: 98%;
   width: 70%; 
   box-shadow:
     0 1px 1px rgba(0,0,0,0.15), /* Тень верхнего слоя */
@@ -16,24 +16,26 @@
     0 20px 1px -9px rgba(0,0,0,0.15); /* Тень третьего слоя */
 }
 .sendData {
-  display: flex; /* Используем Flexbox */
-  flex-direction: column; /* Располагаем элементы в столбик */
-  justify-content: center; /* Центрируем по высоте */
-  align-items: center; /* Центрируем по ширине */
-}
+  display: flex;
+  height: 100%; 
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;}
 
 .inputData {
   width: 75%;
-  height: 100px; 
-  margin-bottom: 15px; /* Отступ между текстовыми областями */
+  height: 8%; 
+  margin-top: 1%;
+  resize: none;
 }
 
 .btnSend {
   width: 75%;
-  height: 50px;
+  height: 8%;
+  margin-bottom: 1%;
   background-color: bisque;
   mix-blend-mode: difference;
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: bold;
   font-family: Arial, Helvetica; 
 }
