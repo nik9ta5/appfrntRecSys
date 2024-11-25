@@ -14,6 +14,7 @@
       </div>
     </div>
     <div class="recommend">
+    <div v-if="this.modelResponse != null"> {{ this.modelResponse }}</div>
     <div v-if="vectorSearchData && vectorSearchData.length">     
       <div v-for="(item, index) in vectorSearchData">
         <div class="recomend_card">
@@ -45,7 +46,8 @@
 
         dataServer: null,
         responseServer:null,
-        vectorSearchData:null
+        vectorSearchData:null,
+        modelResponse:null
       }
     },
     methods: {
@@ -69,6 +71,7 @@
         //Обработка полученных данных;
         this.dataServer = response.data['response'];
         this.vectorSearchData = response.data['vector_search'];
+        this.modelResponse = response.data['response_model'];
         // console.log(response.data);
         // console.log(this.vectorSearchData);
         // for(let i = 0; i < this.vectorSearchData.lenght; i++){
