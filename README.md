@@ -1,29 +1,33 @@
-# appfrnt
+# Клиентская часть рекомендательной системы для предсказания диагноза по протоколу осмотра
 
-This template should help get you started developing with Vue 3 in Vite.
+## Ссылка на серверную часть приложения
+https://github.com/nik9ta5/appserverRecSys/tree/main
 
-## Recommended IDE Setup
+## Требования для запуска
+Перед запуском необходимо установить **npm**
+https://nodejs.org/en/download/package-manager
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Запуск
+Клонируйте репозиторий 
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
+```
+git clone https://github.com/nik9ta5/appfrntRecSys.git
 ```
 
-### Compile and Hot-Reload for Development
+Перейдите в директорию приложения
 
+Выполните команду
 ```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+Приложение будет запущено локально
 
-```sh
-npm run build
+После запуска, введите адрес ниже в поисковую строку браузера
 ```
+http://localhost:5173/
+```
+
+## Описание интерфейса
+На экране расположена форма ввода данных о пациенте. При нажатии кнопки "Отправить" формируется **POST** запрос на **запущенный** сервер в асинхронном режите.
+Клиент получает ответ от сервера с ответом языковой модели — предполагаемый диагноз. Также указываются ближайшие диагнозы, по переданному описанию.
