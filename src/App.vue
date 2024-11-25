@@ -57,7 +57,6 @@
         // console.log(response.data);
       },
       async postFunc() {
-        
         //отправка запроса на сервер
         const response = await axios.post('http://127.0.0.1:5000/preddiagnose', {
           visits : this.visits,
@@ -67,7 +66,6 @@
           diagnosis_details : this.diagnosis_details,
           recommendations : this.recommendations
         });
-
         //Обработка полученных данных;
         this.dataServer = response.data['response'];
         this.vectorSearchData = response.data['vector_search'];
