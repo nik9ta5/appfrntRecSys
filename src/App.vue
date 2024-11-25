@@ -13,9 +13,9 @@
         <button class="btnSend" @click="handleButtonClick">Отправить</button>
       </div>
     </div>
-    <div class="recommend">
-    <div v-if="this.modelResponse != null"> {{ this.modelResponse }}</div>
-    <div v-if="vectorSearchData && vectorSearchData.length">     
+    <div v-if="vectorSearchData && vectorSearchData.length" class="recommend">
+    <div v-if="this.modelResponse != null"><h4>Ответ языковой модели</h4><pre class="for_pre">{{ this.modelResponse }}</pre></div>
+    <div>     
       <div v-for="(item, index) in vectorSearchData">
         <div class="recomend_card">
           <div class="recomend_card_item"><p>Посещение</p></div>
