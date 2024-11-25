@@ -62,10 +62,11 @@ body{
   position: absolute;
   top: 125vh;
   transform: translate(50%, 0);
-  background-color: rgb(255, 251, 236);
+  /* background-color: rgb(255, 251, 236); */
   overflow-y: auto;
   height: 70vh;
   width: 50vw;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
 }
 .recommend-card-item {
   display: flex;
@@ -81,6 +82,7 @@ body{
   padding: 5px;
   margin: 10px 0px 10px 0;
   border-top: 2px solid black;
+  background-color: rgb(255, 251, 236);
 }
 
 .for_pre{
