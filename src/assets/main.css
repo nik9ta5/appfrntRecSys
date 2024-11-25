@@ -55,7 +55,10 @@ body{
   transform: scale(0.95);
 }
 .recommend{
-  background-color: antiquewhite;
+  position: absolute;
+  top: 125vh;
+  transform: translate(50%, 0);
+  background-color: rgb(255, 251, 236);
   overflow-y: auto;
   height: 50vh;
   width: 50vw;
