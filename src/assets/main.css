@@ -1,4 +1,13 @@
+body{
+  display: grid;
+  column-gap: 0;
+  row-gap: 0;
+  grid-template-rows: 100vh 50vh;
+  grid-template-columns: 100vw, 100vw;
+  flex-direction: column;
+}
 .paper {
+  grid-row-start: 1;
   background: #fff7e1;
   margin-left: auto;
   margin-right: auto;
@@ -49,4 +58,16 @@
 
 .btnSend:active {
   transform: scale(0.95);
+}
+.recommend{
+  grid-row-start: 2;
+  background-color: antiquewhite;
+  overflow-y: scroll;
+  height: 50vh;
+  width: 50vw;
+}
+.recommend-card-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
