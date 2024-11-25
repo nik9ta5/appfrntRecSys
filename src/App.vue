@@ -83,12 +83,7 @@
         //Обработка полученных данных;
         this.dataServer = response.data['response'];
         this.vectorSearchData = response.data['vector_search'];
-
-        // console.log(response.data);
-        // console.log(this.vectorSearchData);
-        // for(let i = 0; i < this.vectorSearchData.lenght; i++){
-        //   console.log(this.vectorSearchData[i]);
-        // }
+        console.log(response.data['response_model'])
       }
     }
   };
