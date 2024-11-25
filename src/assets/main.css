@@ -62,7 +62,7 @@ body{
 .recommend{
   grid-row-start: 2;
   background-color: antiquewhite;
-  overflow-y: scroll;
+  overflow-y: auto;
   height: 50vh;
   width: 50vw;
 }

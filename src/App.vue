@@ -12,8 +12,8 @@
         <!--тут функцию поменяла-->
         <button class="btnSend" @click="handleButtonClick">Отправить</button>
       </div>
-  </div>
-  <div class="recommend">
+    </div>
+    <div class="recommend">
     <div v-if="vectorSearchData && vectorSearchData.length">     
       <div v-for="(item, index) in vectorSearchData">
         <div class="recomend_card">
@@ -25,8 +25,8 @@
           <div class="recomend_card_item"><p>Рекомендации, назначения</p></div>
         </div>
       </div>
+      </div>
     </div>
-  </div>
 </body>
 </template>
 
