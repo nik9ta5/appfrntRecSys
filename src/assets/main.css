@@ -1,97 +1,73 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
 body{
-  width: 100%;
-  min-height: 100vh;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.container{
-  width: 1200px;
-  min-height: 100vh;
-
-  align-items: center;
-
   display: grid;
-  grid-template-columns: 1fr 1fr;
-
-}
-
-.left_formData{
-  display: flex;
+  column-gap: 0;
+  row-gap: 0;
+  grid-template-rows: 100vh 50vh;
+  grid-template-columns: 100vw, 100vw;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
-
-.right_recomends{
-  height: 80vh;
-
+.paper {
+  grid-row-start: 1;
+  background: #fff7e1;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  transform: translate(-50%, 0);
+  top: 0;
+  left: 50%;
+  height: 98%;
+  width: 70%; 
+  box-shadow:
+    0 1px 1px rgba(0,0,0,0.15), /* Тень верхнего слоя */
+    0 10px 0 -5px #eee, /* Второй слой */
+    0 10px 1px -4px rgba(0,0,0,0.15), /* Тень второго слоя */
+    0 20px 0 -10px #eee, /* Тень третьего слоя */
+    0 20px 1px -9px rgba(0,0,0,0.15); /* Тень третьего слоя */
+}
+.sendData {
   display: flex;
+  height: 100%; 
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: space-between;
+  align-items: center;}
 
-  padding: 20px;
-  overflow-y: auto; /* Включаем вертикальный скролл */
+.inputData {
+  width: 75%;
+  height: 8%; 
+  margin-top: 2%;
+  font-size: x-large;
+  resize: none;
 }
-
-
-.recomend_card{
-  margin: 20px;
-
-  width: 80%;
-  min-height: 20vh;
-
-  background: rgb(215, 193, 236);
-  border-radius: 10px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-
-  padding: 10px;
-}
-
-.recomend_card_item{
-  margin: 5px;
-  min-height: 3vh;
-
-  font-size: 16px;
-}
-
-
-.formSendData{
-  width: 80%;
-  min-height: 40vh;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.inputData{
-  width: 80%;
-  min-height: 40px;
-
+.btnSend {
+  width: 75%;
+  height: 8%;
+  margin-bottom: 2%;
+  background-color: bisque;
+  mix-blend-mode: difference;
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: Arial, Helvetica; 
+  border: none;
   border-radius: 5px;
-
-  margin: 20px;
-  padding: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+.btnSend:hover {
+  background-color: #ffcc80;
 }
 
-.btnSend{
-  width: 140px;
-  height: 60px;
-
-  border-radius: 10px;
+.btnSend:active {
+  transform: scale(0.95);
+}
+.recommend{
+  grid-row-start: 2;
+  background-color: antiquewhite;
+  overflow-y: scroll;
+  height: 50vh;
+  width: 50vw;
+}
+.recommend-card-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
